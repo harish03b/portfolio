@@ -1,18 +1,20 @@
+import Button from "@/components/ui/Button";
+
 function App() {
   return (
-    <main className="min-h-screen bg-background text-foreground flex items-center justify-center">
-      <div className="rounded-lg border border-border bg-card p-10 shadow-md">
-        <h1 className="font-heading text-4xl font-bold">
-          Portfolio
-        </h1>
+    <main className="bg-background text-foreground flex min-h-screen items-center justify-center">
+      <div className="space-y-4">
+        <Button>Primary</Button>
 
-        <p className="mt-4 text-foreground-muted">
-          Design system is working.
-        </p>
+        <Button variant="secondary">Secondary</Button>
 
-        <button className="mt-6 rounded-md bg-primary px-5 py-2 text-primary-foreground transition-colors hover:bg-primary-hover">
-          Continue
-        </button>
+        <Button variant="outline">Outline</Button>
+
+        <Button variant="ghost">Ghost</Button>
+
+        <Button loading>Loading</Button>
+
+        <Button size="icon">🚀</Button>
       </div>
     </main>
   );
