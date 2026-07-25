@@ -1,0 +1,101 @@
+@layer components {
+  /* ===============================
+     Layout
+  =============================== */
+
+ .page-container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+
+  @apply px-4 sm:px-6 lg:px-8;
+}
+
+  .section {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .section-sm {
+    @apply py-16 md:py-20;
+  }
+
+  .section-lg {
+    @apply py-28 md:py-36 lg:py-40;
+  }
+
+  .content-width {
+    @apply mx-auto max-w-4xl;
+  }
+
+  /* ===============================
+     Grid Background
+  =============================== */
+
+  .grid-background {
+    background-image:
+      linear-gradient(
+        to right,
+        rgb(var(--border) / 0.35) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        rgb(var(--border) / 0.35) 1px,
+        transparent 1px
+      );
+
+    background-size: 48px 48px;
+  }
+
+  /* ===============================
+     Surface
+  =============================== */
+
+  .surface {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+
+  @apply border border-border bg-card;
+}
+
+  /* ===============================
+     Glass
+  =============================== */
+
+  .glass {
+    background: rgb(var(--card) / 0.72);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    @apply border border-border;
+  }
+
+  /* ===============================
+     Divider
+  =============================== */
+
+  .divider {
+    @apply h-px w-full bg-border;
+  }
+
+  /* ===============================
+     Focus Ring
+  =============================== */
+
+  .focus-ring {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* ===============================
+     Hide Scrollbar
+  =============================== */
+
+  .scrollbar-hidden {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+  }
+}

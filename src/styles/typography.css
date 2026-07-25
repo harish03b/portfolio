@@ -1,0 +1,107 @@
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: rgb(var(--foreground));
+    text-wrap: balance;
+  }
+
+  p {
+    font-family: var(--font-body);
+    line-height: 1.75;
+    color: rgb(var(--foreground-muted));
+    text-wrap: pretty;
+  }
+
+  code,
+  pre,
+  kbd,
+  samp {
+    font-family: var(--font-mono);
+  }
+}
+
+@layer components {
+  /* ===============================
+     Display
+  =============================== */
+
+  .display {
+    @apply font-heading text-5xl font-bold tracking-tight md:text-6xl xl:text-7xl;
+  }
+
+  /* ===============================
+     Headings
+  =============================== */
+
+  .heading-1 {
+    @apply font-heading text-4xl font-bold tracking-tight md:text-5xl;
+  }
+
+  .heading-2 {
+    @apply font-heading text-3xl font-semibold tracking-tight md:text-4xl;
+  }
+
+  .heading-3 {
+    @apply font-heading text-2xl font-semibold tracking-tight md:text-3xl;
+  }
+
+  .heading-4 {
+    @apply font-heading text-xl font-semibold md:text-2xl;
+  }
+
+  /* ===============================
+     Body
+  =============================== */
+
+  .body-lg {
+    @apply font-body text-lg leading-8 text-foreground-muted;
+  }
+
+  .body {
+    @apply font-body text-base leading-7 text-foreground-muted;
+  }
+
+  .body-sm {
+    @apply font-body text-sm leading-6 text-foreground-muted;
+  }
+
+  /* ===============================
+     Utility Text
+  =============================== */
+
+  .caption {
+    @apply font-body text-sm font-medium uppercase tracking-[0.16em] text-primary;
+  }
+
+  .label {
+    @apply font-body text-sm font-medium text-foreground;
+  }
+
+  .overline {
+    @apply font-body text-xs font-semibold uppercase tracking-[0.24em] text-foreground-subtle;
+  }
+
+  .mono {
+    @apply font-mono text-sm;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-sky-400 bg-clip-text text-transparent;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
