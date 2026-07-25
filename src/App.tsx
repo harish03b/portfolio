@@ -1,50 +1,38 @@
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
+import Card from "@/components/ui/Card";
+import Container from "@/components/ui/Container";
 
 function App() {
   return (
-    <main className="bg-background text-foreground flex min-h-screen items-center justify-center">
-      <div className="space-y-6">
-        <div className="flex flex-wrap gap-3">
-          <Badge>AI + Full Stack</Badge>
+    <main className="min-h-screen bg-background text-foreground">
+      <Container className="flex min-h-screen items-center justify-center">
+        <Card
+          variant="interactive"
+          padding="lg"
+          className="max-w-xl"
+        >
+          <Badge>Featured Project</Badge>
 
-          <Badge variant="secondary">
-            Available for Full-Time
-          </Badge>
+          <h1 className="heading-2 mt-6">
+            Enterprise Retail Decision Intelligence Platform
+          </h1>
 
-          <Badge variant="outline">
-            Open Source
-          </Badge>
+          <p className="body mt-4">
+            AI-powered retail analytics platform combining machine learning,
+            RAG, FastAPI, React, and enterprise dashboards to deliver
+            intelligent business insights.
+          </p>
 
-          <Badge variant="success">
-            React
-          </Badge>
+          <div className="mt-8 flex gap-3">
+            <Button>View Project</Button>
 
-          <Badge variant="warning">
-            TypeScript
-          </Badge>
-
-          <Badge variant="error">
-            FastAPI
-          </Badge>
-        </div>
-
-        <div className="flex flex-wrap gap-3">
-          <Button>Primary</Button>
-
-          <Button variant="secondary">
-            Secondary
-          </Button>
-
-          <Button variant="outline">
-            Outline
-          </Button>
-
-          <Button variant="ghost">
-            Ghost
-          </Button>
-        </div>
-      </div>
+            <Button variant="outline">
+              GitHub
+            </Button>
+          </div>
+        </Card>
+      </Container>
     </main>
   );
 }
