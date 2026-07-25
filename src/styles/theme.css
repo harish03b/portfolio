@@ -1,0 +1,153 @@
+@layer base {
+  :root {
+    /* ===============================
+       Typography
+    =============================== */
+
+    --font-heading:
+      "Geist", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    --font-body:
+      "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    --font-mono:
+      "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+
+    /* ===============================
+       Layout
+    =============================== */
+
+    --container-width: 1280px;
+
+    /* ===============================
+       Radius
+    =============================== */
+
+    --radius-xs: 6px;
+    --radius-sm: 10px;
+    --radius-md: 14px;
+    --radius-lg: 20px;
+    --radius-xl: 28px;
+
+    /* ===============================
+       Shadows
+    =============================== */
+
+    --shadow-xs: 0 1px 2px rgb(0 0 0 / 0.04);
+
+    --shadow-sm: 0 2px 8px rgb(0 0 0 / 0.06);
+
+    --shadow-md: 0 8px 24px rgb(0 0 0 / 0.08);
+
+    --shadow-lg: 0 20px 48px rgb(0 0 0 / 0.12);
+
+    /* ===============================
+       Transition
+    =============================== */
+
+    --transition-fast: 150ms ease;
+
+    --transition-normal: 250ms ease;
+
+    --transition-slow: 350ms ease;
+
+    /* ===============================
+       Light Theme
+       RGB values only
+    =============================== */
+
+    --background: 250 250 250;
+
+    --background-secondary: 244 244 245;
+
+    --background-tertiary: 228 228 231;
+
+    --foreground: 17 24 39;
+
+    --foreground-muted: 75 85 99;
+
+    --foreground-subtle: 115 115 115;
+
+    --card: 255 255 255;
+
+    --card-foreground: 17 24 39;
+
+    --border: 229 231 235;
+
+    --input: 229 231 235;
+
+    --ring: 37 99 235;
+
+    --primary: 37 99 235;
+
+    --primary-hover: 29 78 216;
+
+    --primary-foreground: 255 255 255;
+
+    --secondary: 241 245 249;
+
+    --secondary-foreground: 17 24 39;
+
+    --muted: 245 245 245;
+
+    --muted-foreground: 107 114 128;
+
+    --success: 22 163 74;
+
+    --warning: 245 158 11;
+
+    --error: 220 38 38;
+
+    --info: 14 165 233;
+  }
+
+  .dark {
+    /* ===============================
+       Dark Theme
+    =============================== */
+
+    --background: 9 9 11;
+
+    --background-secondary: 24 24 27;
+
+    --background-tertiary: 39 39 42;
+
+    --foreground: 250 250 250;
+
+    --foreground-muted: 212 212 216;
+
+    --foreground-subtle: 161 161 170;
+
+    --card: 24 24 27;
+
+    --card-foreground: 250 250 250;
+
+    --border: 63 63 70;
+
+    --input: 63 63 70;
+
+    --ring: 59 130 246;
+
+    --primary: 59 130 246;
+
+    --primary-hover: 96 165 250;
+
+    --primary-foreground: 255 255 255;
+
+    --secondary: 39 39 42;
+
+    --secondary-foreground: 250 250 250;
+
+    --muted: 39 39 42;
+
+    --muted-foreground: 161 161 170;
+
+    --success: 34 197 94;
+
+    --warning: 251 191 36;
+
+    --error: 248 113 113;
+
+    --info: 56 189 248;
+  }
+}
