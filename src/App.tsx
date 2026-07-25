@@ -1,20 +1,49 @@
+import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 
 function App() {
   return (
     <main className="bg-background text-foreground flex min-h-screen items-center justify-center">
-      <div className="space-y-4">
-        <Button>Primary</Button>
+      <div className="space-y-6">
+        <div className="flex flex-wrap gap-3">
+          <Badge>AI + Full Stack</Badge>
 
-        <Button variant="secondary">Secondary</Button>
+          <Badge variant="secondary">
+            Available for Full-Time
+          </Badge>
 
-        <Button variant="outline">Outline</Button>
+          <Badge variant="outline">
+            Open Source
+          </Badge>
 
-        <Button variant="ghost">Ghost</Button>
+          <Badge variant="success">
+            React
+          </Badge>
 
-        <Button loading>Loading</Button>
+          <Badge variant="warning">
+            TypeScript
+          </Badge>
 
-        <Button size="icon">🚀</Button>
+          <Badge variant="error">
+            FastAPI
+          </Badge>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          <Button>Primary</Button>
+
+          <Button variant="secondary">
+            Secondary
+          </Button>
+
+          <Button variant="outline">
+            Outline
+          </Button>
+
+          <Button variant="ghost">
+            Ghost
+          </Button>
+        </div>
       </div>
     </main>
   );
