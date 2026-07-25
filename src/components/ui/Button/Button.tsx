@@ -3,7 +3,7 @@ import { forwardRef } from "react";
 
 import { cn } from "@/lib/cn";
 
-import { ButtonProps } from "./Button.types";
+import type { ButtonProps } from "./Button.types";
 import { buttonVariants } from "./buttonVariants";
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -15,6 +15,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       loading = false,
       disabled,
       children,
+      type = "button",
       ...props
     },
     ref,
@@ -22,7 +23,9 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <button
         ref={ref}
+        type={type}
         disabled={disabled || loading}
+        aria-busy={loading}
         className={cn(
           buttonVariants({
             variant,

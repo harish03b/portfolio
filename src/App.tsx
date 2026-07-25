@@ -1,23 +1,24 @@
-import SectionHeading from "@/components/shared/SectionHeading";
-import Container from "@/components/ui/Container";
-import ThemeToggle from "@/components/ui/ThemeToggle";
-
+import Navbar from "@/components/navigation/Navbar";
+import Hero from "@/sections/Hero";
+import Projects from "@/sections/Projects";
+import Experience from "@/sections/Experience";
+import Skills from "@/sections/Skills";
+import Contact from "@/sections/Contact";
 function App() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Container className="section">
-        <div className="mb-10 flex justify-end">
-          <ThemeToggle />
-        </div>
+    <>
+      <Navbar />
 
-        <SectionHeading
-          overline="Portfolio"
-          title="Selected Work"
-          description="A collection of AI-powered platforms, enterprise software, and modern full-stack applications built to solve real-world business problems."
-          align="center"
-        />
-      </Container>
-    </main>
+      <main className="bg-background pt-20">
+        <Hero />
+
+        <Projects />
+
+        <Experience />
+        <Skills />
+        <Contact />
+      </main>
+    </>
   );
 }
 

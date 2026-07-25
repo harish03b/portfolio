@@ -1,5 +1,5 @@
-import { ButtonHTMLAttributes } from "react";
-import { VariantProps } from "class-variance-authority";
+import type { ButtonHTMLAttributes } from "react";
+import type { VariantProps } from "class-variance-authority";
 
 import { buttonVariants } from "./buttonVariants";
 

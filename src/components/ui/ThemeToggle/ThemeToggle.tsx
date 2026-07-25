@@ -1,16 +1,16 @@
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
-import { cn } from "@/lib/cn";
+import Button from "@/components/ui/Button";
 
-import { ThemeToggleProps } from "./ThemeToggle.types";
+import type { ThemeToggleProps } from "./ThemeToggle.types";
 
 const ThemeToggle = ({
-  className,
   ...props
 }: ThemeToggleProps) => {
   const { resolvedTheme, setTheme } = useTheme();
+
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -19,14 +19,11 @@ const ThemeToggle = ({
 
   if (!mounted) {
     return (
-      <button
-        type="button"
-        aria-label="Toggle theme"
-        className={cn(
-          "flex h-11 w-11 items-center justify-center rounded-md border border-border bg-card",
-          className,
-        )}
+      <Button
+        size="icon"
+        variant="ghost"
         disabled
+        aria-label="Toggle theme"
       />
     );
   }
@@ -34,14 +31,21 @@ const ThemeToggle = ({
   const isDark = resolvedTheme === "dark";
 
   return (
-    <button
-      type="button"
-      aria-label={`Switch to ${isDark ? "light" : "dark"} mode`}
-      className={cn(
-        "flex h-11 w-11 items-center justify-center rounded-md border border-border bg-card transition-colors duration-200 hover:bg-background-secondary",
-        className,
-      )}
-      onClick={() => setTheme(isDark ? "light" : "dark")}
+    <Button
+      size="icon"
+      variant="ghost"
+      aria-label={
+        isDark
+          ? "Switch to light theme"
+          : "Switch to dark theme"
+      }
+      onClick={() =>
+        setTheme(
+          isDark
+            ? "light"
+            : "dark",
+        )
+      }
       {...props}
     >
       {isDark ? (
@@ -49,7 +53,7 @@ const ThemeToggle = ({
       ) : (
         <Moon className="h-5 w-5" />
       )}
-    </button>
+    </Button>
   );
 };
 

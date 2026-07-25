@@ -6,12 +6,14 @@ export const buttonVariants = cva(
     "items-center",
     "justify-center",
     "gap-2",
-    "whitespace-nowrap",
-    "rounded-md",
+    "rounded-lg",
     "font-medium",
     "transition-all",
-    "duration-normal",
-    "focus-ring",
+    "duration-200",
+    "outline-none",
+    "focus-visible:ring-2",
+    "focus-visible:ring-primary",
+    "focus-visible:ring-offset-2",
     "disabled:pointer-events-none",
     "disabled:opacity-50",
     "select-none",
@@ -22,25 +24,31 @@ export const buttonVariants = cva(
         primary: [
           "bg-primary",
           "text-primary-foreground",
-          "hover:bg-primary-hover",
+          "hover:bg-primary/90",
         ],
 
         secondary: [
           "bg-secondary",
           "text-secondary-foreground",
-          "hover:bg-background-tertiary",
+          "hover:bg-secondary/80",
         ],
 
         outline: [
           "border",
           "border-border",
           "bg-transparent",
-          "hover:bg-background-secondary",
+          "hover:bg-muted",
         ],
 
         ghost: [
           "bg-transparent",
-          "hover:bg-background-secondary",
+          "hover:bg-muted",
+        ],
+
+        destructive: [
+          "bg-red-600",
+          "text-white",
+          "hover:bg-red-700",
         ],
       },
 
@@ -51,7 +59,7 @@ export const buttonVariants = cva(
 
         lg: "h-12 px-6 text-base",
 
-        icon: "h-11 w-11",
+        icon: "h-11 w-11 p-0",
       },
     },
 
