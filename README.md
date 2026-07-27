@@ -1,75 +1,275 @@
-# React + TypeScript + Vite
+# 🚀 Harish Thakre | AI + Full Stack Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and production-ready portfolio built with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Framer Motion**. This portfolio showcases my software engineering journey, AI projects, full-stack applications, cloud development, technical skills, and professional experience.
 
-Currently, two official plugins are available:
+🌐 **Live Demo:** https://portfolio-7papnq7w6-harish03bs-projects.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📸 Preview
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+> Add a screenshot of your portfolio homepage here.
 
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+public/images/portfolio-preview.png
 ```
+
+---
+
+# ✨ Features
+
+- 🎨 Modern and responsive UI
+- 🌙 Dark / Light theme
+- ⚡ Smooth animations using Framer Motion
+- 📱 Mobile-first responsive design
+- 🧭 Intelligent navigation with active section highlighting
+- 💼 Interactive project showcase
+- 🖼️ Project image galleries
+- 📄 Resume download
+- 📚 Professional journey timeline
+- 🛠️ Categorized technical skills
+- 📬 Contact section with social links
+- ⚙️ Modular and scalable architecture
+- 🚀 Optimized Vite production build
+
+---
+
+# 🏗️ Tech Stack
+
+## Frontend
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Framer Motion
+
+## UI
+
+- Lucide React
+- Custom Design System
+- Responsive Components
+
+## Tooling
+
+- Git
+- GitHub
+- Vercel
+- npm
+
+---
+
+# 📂 Project Structure
+
+```text
+src/
+│
+├── animations/
+├── assets/
+├── components/
+│
+│   ├── hero/
+│   ├── navigation/
+│   ├── projects/
+│   ├── journey/
+│   ├── skills/
+│   ├── contact/
+│   ├── shared/
+│   └── ui/
+│
+├── data/
+├── hooks/
+├── lib/
+├── sections/
+├── services/
+├── styles/
+├── types/
+└── utils/
+```
+
+---
+
+# 📌 Sections
+
+- Hero
+- About
+- Featured Projects
+- Professional Journey
+- Technical Skills
+- Contact
+- Footer
+
+---
+
+# 💼 Featured Projects
+
+## 🛒 Enterprise Retail Decision Intelligence Platform (ERDIP)
+
+Enterprise AI platform combining:
+
+- FastAPI
+- React
+- Machine Learning
+- SQL Analytics
+- LangChain
+- FAISS
+- Retrieval-Augmented Generation (RAG)
+
+---
+
+## ☁️ Cloud Task Manager
+
+AWS Serverless application using:
+
+- AWS Lambda
+- API Gateway
+- DynamoDB
+- Next.js
+- TypeScript
+
+---
+
+## 💰 Mutual Fund Registration Platform
+
+Cross-platform FinTech application built with:
+
+- React Native
+- Expo
+- Firebase Authentication
+- Express.js
+
+---
+
+## 🎓 Alumni Association Portal
+
+Full Stack web application featuring:
+
+- Authentication
+- Mentorship
+- Job Portal
+- Events
+- Donations
+
+---
+
+# 🚀 Getting Started
+
+## Clone
+
+```bash
+git clone https://github.com/harish03b/portfolio.git
+```
+
+---
+
+## Install
+
+```bash
+npm install
+```
+
+---
+
+## Start Development Server
+
+```bash
+npm run dev
+```
+
+---
+
+## Production Build
+
+```bash
+npm run build
+```
+
+---
+
+## Preview Production Build
+
+```bash
+npm run preview
+```
+
+---
+
+# 📱 Responsive Design
+
+Optimized for
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile
+
+---
+
+# 🎨 Design Highlights
+
+- Minimalist UI
+- Modern Typography
+- Smooth Motion
+- Consistent Color System
+- Accessible Components
+- Clean Information Architecture
+
+---
+
+# 📈 Performance
+
+- Fast Vite builds
+- Component-based architecture
+- Optimized assets
+- Lazy-loaded project images
+- Production-ready deployment
+
+---
+
+# 🌍 Deployment
+
+Hosted on **Vercel**
+
+Live Website
+
+https://portfolio-7papnq7w6-harish03bs-projects.vercel.app/
+
+---
+
+# 👨‍💻 About Me
+
+I'm an AI and Full Stack Developer passionate about building scalable software solutions using modern web technologies, machine learning, and cloud computing.
+
+My interests include:
+
+- Artificial Intelligence
+- Full Stack Development
+- Cloud Computing
+- Software Architecture
+- Enterprise Applications
+
+---
+
+# 📬 Contact
+
+**Harish Thakre**
+
+📍 Pune, Maharashtra, India
+
+📧 thakreharish03@gmail.com
+
+💼 LinkedIn
+
+https://www.linkedin.com/in/harish-thakre-b75400216/
+
+🐙 GitHub
+
+https://github.com/harish03b
+
+---
+
+# 📄 License
+
+This project is developed for portfolio and educational purposes.
+
+© 2026 Harish Thakre. All Rights Reserved.
