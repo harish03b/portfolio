@@ -133,7 +133,6 @@ export const portfolio = {
       "MySQL",
       "AWS",
       "Docker",
-      "LangChain",
       "Machine Learning",
       "Generative AI",
     ],
@@ -185,9 +184,8 @@ export const portfolio = {
           "Tailwind CSS",
           "HTML5",
           "CSS3",
-          "Material UI",
           "Bootstrap",
-          "Framer Motion",
+          
         ],
       },
 
@@ -207,9 +205,7 @@ export const portfolio = {
         items: [
           "Machine Learning",
           "Generative AI",
-          "LangChain",
           "RAG",
-          "FAISS",
           "Scikit-Learn",
           "TensorFlow",
           "YOLOv8",
