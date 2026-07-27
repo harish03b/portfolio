@@ -17,6 +17,9 @@ const ProjectCard = ({
     <article
       className="
         group
+        flex
+        h-full
+        flex-col
         overflow-hidden
         rounded-3xl
         border
@@ -24,9 +27,9 @@ const ProjectCard = ({
         bg-card
         transition-all
         duration-300
-        hover:-translate-y-2
+        hover:-translate-y-3
         hover:border-primary
-        hover:shadow-xl
+        hover:shadow-[0_25px_60px_rgba(59,130,246,0.18)]
       "
     >
       {/* Project Image */}
@@ -51,8 +54,8 @@ const ProjectCard = ({
               w-full
               object-cover
               transition-transform
-              duration-500
-              group-hover:scale-105
+              duration-700
+              group-hover:scale-110
             "
           />
         ) : (
@@ -60,16 +63,24 @@ const ProjectCard = ({
             className="
               flex
               h-full
+              flex-col
               items-center
               justify-center
+              gap-3
               text-foreground-muted
             "
           >
-            Project Preview
+            <p className="text-lg font-semibold">
+              Preview Coming Soon
+            </p>
+
+            <p className="text-sm">
+              Dashboard Screenshot
+            </p>
           </div>
         )}
 
-        {/* Gradient Overlay */}
+        {/* Gradient */}
 
         <div
           className="
@@ -89,8 +100,8 @@ const ProjectCard = ({
             className="
               rounded-full
               bg-primary
-              px-3
-              py-1
+              px-4
+              py-1.5
               text-xs
               font-semibold
               text-primary-foreground
@@ -107,8 +118,8 @@ const ProjectCard = ({
             className="
               rounded-full
               bg-card/90
-              px-3
-              py-1
+              px-4
+              py-1.5
               text-xs
               font-medium
               backdrop-blur-md
@@ -119,9 +130,16 @@ const ProjectCard = ({
         </div>
       </div>
 
-      {/* Card Content */}
+      {/* Content */}
 
-      <div className="p-7">
+      <div
+        className="
+          flex
+          flex-1
+          flex-col
+          p-7
+        "
+      >
         <h3
           className="
             text-2xl
@@ -164,25 +182,29 @@ const ProjectCard = ({
                   border
                   border-border
                   bg-background
-                  px-3
-                  py-1
+                  px-4
+                  py-2
                   text-xs
                   font-medium
+                  transition-all
+                  duration-300
+                  hover:border-primary
+                  hover:bg-primary/10
                 "
               >
                 {technology}
               </span>
             ))}
         </div>
-             {/* Action Buttons */}
+
+        {/* Buttons */}
 
         <div
           className="
             mt-8
             flex
             flex-wrap
-            items-center
-            gap-3
+            gap-4
           "
         >
           {project.github && (
@@ -229,7 +251,7 @@ const ProjectCard = ({
           </Button>
         </div>
 
-        {/* Bottom Accent */}
+        {/* Divider */}
 
         <div
           className="
@@ -241,15 +263,37 @@ const ProjectCard = ({
             to-transparent
           "
         />
-             {/* Footer */}
 
-        <div className="mt-6 flex items-center justify-between">
+        {/* Footer */}
+
+        <div
+          className="
+            mt-auto
+            flex
+            items-center
+            justify-between
+            pt-8
+          "
+        >
           <div>
-            <p className="text-xs uppercase tracking-wider text-foreground-muted">
+            <p
+              className="
+                text-xs
+                uppercase
+                tracking-wider
+                text-foreground-muted
+              "
+            >
               Duration
             </p>
 
-            <p className="mt-1 text-sm font-semibold text-foreground">
+            <p
+              className="
+                mt-1
+                text-sm
+                font-semibold
+              "
+            >
               {project.duration}
             </p>
           </div>
@@ -259,8 +303,8 @@ const ProjectCard = ({
               className="
                 rounded-full
                 bg-primary/10
-                px-3
-                py-1
+                px-4
+                py-1.5
                 text-xs
                 font-semibold
                 text-primary
@@ -275,4 +319,4 @@ const ProjectCard = ({
   );
 };
 
-export default ProjectCard;      
+export default ProjectCard;

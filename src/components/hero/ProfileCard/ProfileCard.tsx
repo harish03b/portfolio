@@ -18,14 +18,14 @@ const ProfileCard = () => {
         border
         border-border
         bg-card
-        shadow-lg
+        shadow-xl
       "
     >
       {/* Cover */}
 
       <div
         className="
-          h-28
+          h-36
           bg-gradient-to-r
           from-primary
           via-blue-500
@@ -40,24 +40,24 @@ const ProfileCard = () => {
           src={portfolio.profile.profileImage}
           alt={portfolio.profile.fullName}
           className="
-            -mt-14
-            h-28
-            w-28
+            -mt-16
+            h-36
+            w-36
             rounded-full
             border-4
             border-card
             object-cover
-            shadow-xl
+            shadow-2xl
           "
         />
       </div>
 
-      {/* Basic Info */}
+      {/* Basic Information */}
 
-      <div className="px-8 pt-5 text-center">
+      <div className="px-8 pt-7 text-center">
         <h3
           className="
-            text-2xl
+            text-3xl
             font-bold
             text-foreground
           "
@@ -67,7 +67,8 @@ const ProfileCard = () => {
 
         <p
           className="
-            mt-2
+            mt-3
+            text-lg
             font-medium
             text-primary
           "
@@ -77,7 +78,7 @@ const ProfileCard = () => {
 
         <div
           className="
-            mt-4
+            mt-5
             flex
             items-center
             justify-center
@@ -107,36 +108,59 @@ const ProfileCard = () => {
           Professional Summary
         </h4>
 
-        {portfolio.contact.description}
+        <p
+          className="
+            mt-4
+            leading-7
+            text-foreground-muted
+          "
+        >
+          {portfolio.contact.description}
+        </p>
       </div>
             {/* Statistics */}
 
       <div className="mt-8 border-t border-border px-8 py-8">
-        <div className="grid grid-cols-2 gap-5">
+        <div className="grid grid-cols-2 gap-6">
+
+          {/* Projects */}
+
           <div
             className="
               rounded-2xl
               border
               border-border
               bg-background
-              p-5
+              p-6
               text-center
+              transition-all
+              duration-300
+              hover:border-primary
+              hover:-translate-y-1
             "
           >
             <Briefcase
               className="
                 mx-auto
-                h-5
-                w-5
+                h-6
+                w-6
                 text-primary
               "
             />
 
-            {portfolio.statistics[0].value}
+            <p
+              className="
+                mt-3
+                text-2xl
+                font-bold
+              "
+            >
+              {portfolio.statistics[0].value}
+            </p>
 
             <p
               className="
-                mt-1
+                mt-2
                 text-xs
                 uppercase
                 tracking-wider
@@ -147,30 +171,44 @@ const ProfileCard = () => {
             </p>
           </div>
 
+          {/* Technologies */}
+
           <div
             className="
               rounded-2xl
               border
               border-border
               bg-background
-              p-5
+              p-6
               text-center
+              transition-all
+              duration-300
+              hover:border-primary
+              hover:-translate-y-1
             "
           >
             <Code2
               className="
                 mx-auto
-                h-5
-                w-5
+                h-6
+                w-6
                 text-primary
               "
             />
 
-            {portfolio.statistics[2].value}
+            <p
+              className="
+                mt-3
+                text-2xl
+                font-bold
+              "
+            >
+              {portfolio.statistics[2].value}
+            </p>
 
             <p
               className="
-                mt-1
+                mt-2
                 text-xs
                 uppercase
                 tracking-wider
@@ -181,30 +219,44 @@ const ProfileCard = () => {
             </p>
           </div>
 
+          {/* Internships */}
+
           <div
             className="
               rounded-2xl
               border
               border-border
               bg-background
-              p-5
+              p-6
               text-center
+              transition-all
+              duration-300
+              hover:border-primary
+              hover:-translate-y-1
             "
           >
             <Briefcase
               className="
                 mx-auto
-                h-5
-                w-5
+                h-6
+                w-6
                 text-primary
               "
             />
 
-            {portfolio.statistics[1].value}
+            <p
+              className="
+                mt-3
+                text-2xl
+                font-bold
+              "
+            >
+              {portfolio.statistics[1].value}
+            </p>
 
             <p
               className="
-                mt-1
+                mt-2
                 text-xs
                 uppercase
                 tracking-wider
@@ -215,30 +267,44 @@ const ProfileCard = () => {
             </p>
           </div>
 
+          {/* CGPA */}
+
           <div
             className="
               rounded-2xl
               border
               border-border
               bg-background
-              p-5
+              p-6
               text-center
+              transition-all
+              duration-300
+              hover:border-primary
+              hover:-translate-y-1
             "
           >
             <GraduationCap
               className="
                 mx-auto
-                h-5
-                w-5
+                h-6
+                w-6
                 text-primary
               "
             />
 
-            {portfolio.statistics[3].value}
+            <p
+              className="
+                mt-3
+                text-2xl
+                font-bold
+              "
+            >
+              {portfolio.statistics[3].value}
+            </p>
 
             <p
               className="
-                mt-1
+                mt-2
                 text-xs
                 uppercase
                 tracking-wider
@@ -248,9 +314,10 @@ const ProfileCard = () => {
               CGPA
             </p>
           </div>
+
         </div>
       </div>
-             {/* Availability */}
+              {/* Availability */}
 
       <div className="border-t border-border px-8 py-8">
         <div
@@ -259,27 +326,40 @@ const ProfileCard = () => {
             border
             border-emerald-500/20
             bg-emerald-500/10
-            p-5
+            p-6
+            transition-all
+            duration-300
+            hover:border-emerald-500/40
           "
         >
-          <div className="flex items-center gap-3">
-            <span className="h-3 w-3 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="flex items-start gap-4">
+            <span
+              className="
+                mt-1
+                h-3
+                w-3
+                shrink-0
+                rounded-full
+                bg-emerald-500
+                animate-pulse
+              "
+            />
 
             <div>
               <p
                 className="
-                  text-sm
+                  text-base
                   font-semibold
                   text-emerald-600
                 "
               >
-               {portfolio.profile.availability}
+                {portfolio.profile.availability}
               </p>
 
               <p
                 className="
-                  mt-1
-                  text-sm
+                  mt-2
+                  leading-7
                   text-foreground-muted
                 "
               >
@@ -290,21 +370,6 @@ const ProfileCard = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Footer */}
-
-      <div
-        className="
-          border-t
-          border-border
-          bg-background-secondary/40
-          px-8
-          py-5
-          text-center
-        "
-      >
-        {portfolio.hero.heading.join(" ")}
       </div>
     </aside>
   );

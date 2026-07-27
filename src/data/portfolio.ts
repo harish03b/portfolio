@@ -58,10 +58,10 @@ export const portfolio = {
       href: "#skills",
     },
     {
-      id: "professionalJourney",
-      label: "professionalJourney",
-      href: "#professionalJourney",
-    },
+  id: "journey",
+  label: "Professional Journey",
+  href: "#journey",
+},
     {
       id: "contact",
       label: "Contact",
@@ -413,10 +413,10 @@ export const portfolio = {
       live: "",
 
       images: [
-        "/images/projects/ai-retail-intelligence/dashboard.png",
-        "/images/projects/ai-retail-intelligence/analytics.png",
-        "/images/projects/ai-retail-intelligence/rag.png",
-      ],
+  "/images/projects/ai-retail-intelligence/dashboard.png",
+  "/images/projects/ai-retail-intelligence/ai_assistant.png",
+  "/images/projects/ai-retail-intelligence/document.png",
+],
       problemStatement:
   "Large retail enterprises generate massive volumes of sales, inventory, customer, supplier, and operational data every day. However, this data is often distributed across multiple systems, making it difficult to gain unified business insights. Decision-makers struggle with inaccurate demand forecasting, inefficient inventory management, manual report generation, customer retention challenges, and scattered business documentation. The objective of ERDIP was to create a centralized AI-powered decision intelligence platform capable of transforming raw retail data into actionable business insights using analytics, machine learning, Retrieval-Augmented Generation (RAG), and intelligent dashboards.",
 
@@ -677,7 +677,7 @@ galleryCaptions: [
       live: "",
 
       images: [
-        "/images/projects/fintech/dashboard.png",
+        "/images/projects/fintech/login.png",
       ],
       problemStatement:
   "Mutual fund distributors and investors often face a lengthy and fragmented registration process that involves multiple portals, manual verification, and poor visibility of empanelment requirements. The objective of this project was to simplify the registration workflow by providing a centralized application where users can authenticate securely, browse mutual fund houses, access empanelment links, and receive important notifications from a single interface.",
@@ -796,8 +796,9 @@ galleryCaptions: [
       live: "",
 
       images: [
-        "/images/projects/alumni-portal/dashboard.png",
-      ],
+  "/images/projects/alumni-portal/dashboard.png",
+  "/images/projects/alumni-portal/feature.png",
+],
       problemStatement:
   "Educational institutions often struggle to maintain long-term engagement between alumni, students, and faculty due to the lack of a centralized digital platform. Communication, mentorship, job opportunities, event management, and donations are typically handled through disconnected channels. The objective of this project was to develop a unified alumni management portal that strengthens alumni engagement while providing valuable career development opportunities for students.",
 
@@ -919,6 +920,6 @@ galleryCaptions: [
       "© 2026 Harish Thakre. All rights reserved.",
 
     builtWith:
-      "Built with React, TypeScript, Vite, Tailwind CSS and Framer Motion.",
+      "React • TypeScript • Vite • Tailwind CSS • Framer Motion",
   },
 } as const;

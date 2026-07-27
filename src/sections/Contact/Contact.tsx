@@ -1,3 +1,11 @@
+import { motion } from "framer-motion";
+
+import {
+  fadeUp,
+  slideLeft,
+  slideRight,
+  viewport,
+} from "@/animations";
 
 import ContactContent from "@/components/contact/ContactContent";
 import ContactLinks from "@/components/contact/ContactLinks";
@@ -14,67 +22,90 @@ const Contact = ({
   return (
     <section
       id="contact"
-      className={`py-24 ${className ?? ""}`}
+      className={`pt-24 ${className ?? ""}`}
     >
-      <Container>
-        {/* Top Section */}
+      {/* Contact Section */}
 
+      <Container>
         <div
           className="
             grid
             gap-16
-            border-t
-            border-border
-            pt-20
             lg:grid-cols-2
             lg:items-start
           "
         >
-          {/* About */}
+          {/* Left Column */}
 
-          <ContactContent
-            title={portfolio.contact.title}
-            description={portfolio.contact.description}
-            resume="/resume/Harish_Thakre_Resume.pdf"
-          />
+          <motion.div
+            variants={slideRight}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
+            <ContactContent
+              title={portfolio.contact.title}
+              description={portfolio.contact.description}
+              resume="/resume/Harish_Thakre_Resume.pdf"
+            />
+          </motion.div>
 
-          {/* Contact Links */}
+          {/* Right Column */}
 
-          <ContactLinks
-            email={portfolio.contact.email}
-            linkedin={portfolio.social.linkedin.url}
-            github={portfolio.social.github.url}
-            location={portfolio.contact.location}
-          />
+          <motion.div
+            variants={slideLeft}
+            initial="hidden"
+            whileInView="visible"
+            viewport={viewport}
+          >
+            <ContactLinks
+              email={portfolio.contact.email}
+              linkedin={portfolio.social.linkedin.url}
+              github={portfolio.social.github.url}
+              location={portfolio.contact.location}
+            />
+          </motion.div>
         </div>
+      </Container>
 
-        {/* Footer */}
+      {/* Full Width Divider */}
 
-        <div
+      <motion.div
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={viewport}
+        className="
+          mt-24
+          border-t
+          border-border
+        "
+      />
+
+      {/* Footer */}
+
+      <Container>
+        <motion.footer
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
           className="
-            mt-20
-            border-t
-            border-border
-            pt-8
+            flex
+            flex-col
+            items-center
+            justify-between
+            gap-5
+            py-8
+            text-sm
+            text-foreground-muted
+            md:flex-row
           "
         >
-          <div
-            className="
-              flex
-              flex-col
-              items-center
-              justify-between
-              gap-4
-              text-sm
-              text-foreground-muted
-              md:flex-row
-            "
-          >
-            <p>{portfolio.footer.copyright}</p>
+          <p>{portfolio.footer.copyright}</p>
 
-            <p>{portfolio.footer.builtWith}</p>
-          </div>
-        </div>
+          <p>{portfolio.footer.builtWith}</p>
+        </motion.footer>
       </Container>
     </section>
   );

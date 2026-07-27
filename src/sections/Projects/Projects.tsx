@@ -1,11 +1,20 @@
 import { useState } from "react";
 
+import { motion } from "framer-motion";
+
+import {
+  fadeUp,
+  staggerContainer,
+  viewport,
+} from "@/animations";
+
 import ProjectCard from "@/components/projects/ProjectCard";
 import ProjectModal from "@/components/projects/ProjectModal";
 import type { Project } from "@/components/projects/ProjectCard";
 
 import SectionHeading from "@/components/shared/SectionHeading";
 import Container from "@/components/ui/Container";
+
 import { portfolio } from "@/data/portfolio";
 
 import type { ProjectsProps } from "./Projects.types";
@@ -33,13 +42,29 @@ const Projects = ({ className }: ProjectsProps) => {
       className={`py-32 ${className ?? ""}`}
     >
       <Container>
-        <SectionHeading
-          badge="Portfolio"
-          title="Featured Projects"
-          description="A selection of AI, Cloud and Full Stack projects demonstrating real-world software engineering and problem solving."
-        />
 
-        <div
+        {/* Section Heading */}
+
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
+          <SectionHeading
+           overline="Portfolio"
+            title="Featured Projects"
+            description="A selection of AI, Cloud and Full Stack projects demonstrating real-world software engineering and problem solving."
+          />
+        </motion.div>
+
+        {/* Projects Grid */}
+
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
           className="
             mt-20
             grid
@@ -48,19 +73,24 @@ const Projects = ({ className }: ProjectsProps) => {
           "
         >
           {portfolio.projects.map((project) => (
-            <ProjectCard
+            <motion.div
               key={project.id}
-              project={project}
-              onViewDetails={openProject}
-            />
+              variants={fadeUp}
+            >
+              <ProjectCard
+                project={project}
+                onViewDetails={openProject}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
         <ProjectModal
           project={selectedProject}
           open={isModalOpen}
           onClose={closeProject}
         />
+
       </Container>
     </section>
   );

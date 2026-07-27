@@ -1,7 +1,13 @@
 import JourneyTimeline from "@/components/journey/JourneyTimeline";
 
-const Experience = () => {
-  return <JourneyTimeline />;
+import type { ExperienceProps } from "./Experience.types";
+
+const Experience = ({ className }: ExperienceProps) => {
+  return (
+    <section className={className}>
+      <JourneyTimeline />
+    </section>
+  );
 };
 
 export default Experience;

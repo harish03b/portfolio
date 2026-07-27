@@ -20,12 +20,12 @@ const JourneyItem = ({
     border
     border-border
     bg-card
-    p-6
+    p-7
     transition-all
     duration-300
-    hover:-translate-y-1
+    hover:-translate-y-2
     hover:border-primary
-    hover:shadow-2xl
+    hover:shadow-[0_25px_60px_rgba(59,130,246,0.18)]
   "
 >
       {/* Top Gradient */}
@@ -49,8 +49,8 @@ const JourneyItem = ({
         <div
           className="
             flex
-            h-14
-            w-14
+            h-16
+            w-16
             shrink-0
             items-center
             justify-center
@@ -61,16 +61,16 @@ const JourneyItem = ({
           {item.type === "experience" ? (
             <Briefcase
               className="
-                h-7
-                w-7
+                h-8
+                w-8
                 text-primary
               "
             />
           ) : (
             <GraduationCap
               className="
-                h-7
-                w-7
+                h-8
+                w-8
                 text-primary
               "
             />
@@ -80,7 +80,7 @@ const JourneyItem = ({
         <div className="flex-1">
           <h3
             className="
-              text-xl
+              text-2xl
               font-bold
               leading-tight
             "
@@ -90,7 +90,7 @@ const JourneyItem = ({
 
           <p
             className="
-              mt-1
+              mt-2
               text-primary
               font-medium
             "
@@ -107,7 +107,7 @@ const JourneyItem = ({
           mt-6
           flex
           flex-wrap
-          gap-5
+          gap-8
           text-sm
           text-foreground-muted
         "
@@ -198,8 +198,8 @@ const JourneyItem = ({
                 border
                 border-primary/20
                 bg-primary/10
-                px-3
-                py-1.5
+                px-4
+                py-2
                 text-xs
                 font-medium
                 text-primary
@@ -224,8 +224,8 @@ const JourneyItem = ({
               inline-flex
               rounded-full
               bg-emerald-500/10
-              px-4
-              py-2
+              px-5
+py-2.5
               text-sm
               font-semibold
               text-emerald-500
@@ -241,7 +241,7 @@ const JourneyItem = ({
 
       <div
         className="
-          mt-8
+          mt-10
           h-px
           bg-gradient-to-r
           from-transparent

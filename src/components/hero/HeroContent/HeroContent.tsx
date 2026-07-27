@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
 
+import { motion } from "framer-motion";
+
+import {
+  fadeUp,
+  viewport,
+} from "@/animations";
+
 import Button from "@/components/ui/Button";
 
 import { portfolio } from "@/data/portfolio";
@@ -20,7 +27,12 @@ useEffect(() => {
   return () => clearInterval(interval);
 }, []);
   return (
-    <div>
+    <motion.div
+  variants={fadeUp}
+  initial="hidden"
+  whileInView="visible"
+  viewport={viewport}
+>
       {/* Badge */}
 
       <span
@@ -30,8 +42,8 @@ useEffect(() => {
           border
           border-primary/20
           bg-primary/10
-          px-4
-          py-2
+          px-5
+          py-2.5
           text-sm
           font-semibold
           text-primary
@@ -44,12 +56,12 @@ useEffect(() => {
 
       <h1
         className="
-          mt-8
-          text-5xl
-          font-black
-          leading-tight
-          tracking-tight
-          lg:text-7xl
+         mt-10
+text-5xl
+font-black
+leading-none
+tracking-tight
+lg:text-[5.3rem]
         "
       >
         {portfolio.profile.fullName}
@@ -59,8 +71,8 @@ useEffect(() => {
 
       <div
         className="
-          mt-6
-          h-12
+          mt-8
+          h-14
           overflow-hidden
         "
       >
@@ -69,7 +81,7 @@ useEffect(() => {
             text-3xl
             font-bold
             text-primary
-            lg:text-4xl
+            lg:text-[2.7rem]
           "
         >
          <span
@@ -88,10 +100,10 @@ useEffect(() => {
 
       <p
         className="
-          mt-8
+          mt-10
           max-w-2xl
-          text-lg
-          leading-8
+          text-xl
+leading-9
           text-foreground-muted
         "
       >
@@ -101,10 +113,10 @@ useEffect(() => {
 
       <div
         className="
-          mt-10
+          mt-12
           flex
           flex-wrap
-          gap-4
+          gap-5
         "
       >
         <Button
@@ -138,11 +150,11 @@ useEffect(() => {
 
       <div
         className="
-          mt-10
+          mt-12
           flex
           flex-wrap
           items-center
-          gap-6
+          gap-8
         "
       >
         <a
@@ -188,7 +200,7 @@ useEffect(() => {
           Email
         </a>
       </div>
-          </div>
+          </motion.div>
   );
 };
 

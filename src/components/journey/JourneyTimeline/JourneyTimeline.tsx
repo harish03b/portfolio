@@ -1,3 +1,11 @@
+import { motion } from "framer-motion";
+
+import {
+  fadeUp,
+  staggerContainer,
+  viewport,
+} from "@/animations";
+
 import JourneyItem from "@/components/journey/JourneyItem";
 
 import Container from "@/components/ui/Container";
@@ -25,26 +33,27 @@ const JourneyTimeline = () => {
       title: item.degree,
       subtitle: item.institute,
       duration: item.duration,
+
       location:
-  "university" in item
-    ? item.university
-    : "board" in item
-    ? item.board
-    : "",
+        "university" in item
+          ? item.university
+          : "board" in item
+          ? item.board
+          : "",
 
-description:
-  "specialization" in item
-    ? [item.specialization]
-    : [],
+      description:
+        "specialization" in item
+          ? [item.specialization]
+          : [],
 
-tags: [],
+      tags: [],
 
-score:
-  "cgpa" in item
-    ? item.cgpa
-    : "percentage" in item
-    ? item.percentage
-    : "",
+      score:
+        "cgpa" in item
+          ? item.cgpa
+          : "percentage" in item
+          ? item.percentage
+          : "",
     };
   });
 
@@ -54,26 +63,45 @@ score:
       className="py-28"
     >
       <Container>
-        <SectionHeading
-          badge="Professional Journey"
-          title="My Professional Journey"
-          description="Internships, education and important milestones."
-        />
 
-        <div className="mt-20 space-y-16"> 
-                      {/* Row 1 */}
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+        >
+          <SectionHeading
+            overline="Professional Journey"
+            title="My Professional Journey"
+            description="Internships, education and important milestones."
+          />
+        </motion.div>
+
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={viewport}
+          className="mt-20 space-y-24"
+        >
+
+          {/* Row 1 */}
 
           <div
             className="
               grid
               items-center
-              gap-8
-              lg:grid-cols-[1fr_90px_1fr]
+              gap-14
+              lg:grid-cols-[1fr_120px_1fr]
             "
           >
-            <JourneyItem item={journey[0]} />
 
-            <div
+            <motion.div variants={fadeUp}>
+              <JourneyItem item={journey[0]} />
+            </motion.div>
+
+            <motion.div
+              variants={fadeUp}
               className="
                 hidden
                 items-center
@@ -81,34 +109,48 @@ score:
                 lg:flex
               "
             >
-              <div className="h-1 w-full bg-primary rounded-full" />
+              <div
+                className="
+                  h-1.5
+                  w-full
+                  rounded-full
+                  bg-gradient-to-r
+                  from-primary
+                  to-cyan-400
+                "
+              />
 
               <svg
                 className="-ml-1"
-                width="26"
-                height="26"
+                width="34"
+                height="34"
                 viewBox="0 0 24 24"
                 fill="none"
               >
                 <path
                   d="M5 12H19M13 6L19 12L13 18"
                   stroke="currentColor"
-                  strokeWidth="2.5"
+                  strokeWidth="3"
                   className="text-primary"
                 />
               </svg>
-            </div>
+            </motion.div>
 
-            <JourneyItem item={journey[1]} />
+            <motion.div variants={fadeUp}>
+              <JourneyItem item={journey[1]} />
+            </motion.div>
+
           </div>
-                    {/* Vertical Connector */}
 
-          <div
+          {/* Vertical Connector */}
+
+          <motion.div
+            variants={fadeUp}
             className="
               hidden
-              lg:flex
               justify-center
               py-2
+              lg:flex
             "
           >
             <div
@@ -118,37 +160,48 @@ score:
                 items-center
               "
             >
-              <div className="h-10 w-1 rounded-full bg-primary" />
+              <div
+                className="
+                  h-14
+                  w-1.5
+                  rounded-full
+                  bg-gradient-to-b
+                  from-primary
+                  to-cyan-400
+                "
+              />
 
               <svg
-                width="24"
-                height="24"
+                width="30"
+                height="30"
                 viewBox="0 0 24 24"
                 fill="none"
               >
                 <path
                   d="M12 5V19M6 13L12 19L18 13"
                   stroke="currentColor"
-                  strokeWidth="2.5"
+                  strokeWidth="3"
                   className="text-primary"
                 />
               </svg>
             </div>
-          </div>
-
-          {/* Row 2 */}
+          </motion.div>
+                    {/* Row 2 */}
 
           <div
             className="
               grid
               items-center
-              gap-8
-              lg:grid-cols-[1fr_90px_1fr]
+              gap-14
+              lg:grid-cols-[1fr_120px_1fr]
             "
           >
-            <JourneyItem item={journey[2]} />
+            <motion.div variants={fadeUp}>
+              <JourneyItem item={journey[2]} />
+            </motion.div>
 
-            <div
+            <motion.div
+              variants={fadeUp}
               className="
                 hidden
                 items-center
@@ -156,34 +209,47 @@ score:
                 lg:flex
               "
             >
-              <div className="h-1 w-full bg-primary rounded-full" />
+              <div
+                className="
+                  h-1.5
+                  w-full
+                  rounded-full
+                  bg-gradient-to-r
+                  from-primary
+                  to-cyan-400
+                "
+              />
 
               <svg
                 className="-ml-1"
-                width="26"
-                height="26"
+                width="34"
+                height="34"
                 viewBox="0 0 24 24"
                 fill="none"
               >
                 <path
                   d="M5 12H19M13 6L19 12L13 18"
                   stroke="currentColor"
-                  strokeWidth="2.5"
+                  strokeWidth="3"
                   className="text-primary"
                 />
               </svg>
-            </div>
+            </motion.div>
 
-            <JourneyItem item={journey[3]} />
+            <motion.div variants={fadeUp}>
+              <JourneyItem item={journey[3]} />
+            </motion.div>
           </div>
-                    {/* Vertical Connector */}
 
-          <div
+          {/* Vertical Connector */}
+
+          <motion.div
+            variants={fadeUp}
             className="
               hidden
-              lg:flex
               justify-center
               py-2
+              lg:flex
             "
           >
             <div
@@ -193,23 +259,32 @@ score:
                 items-center
               "
             >
-              <div className="h-10 w-1 rounded-full bg-primary" />
+              <div
+                className="
+                  h-14
+                  w-1.5
+                  rounded-full
+                  bg-gradient-to-b
+                  from-primary
+                  to-cyan-400
+                "
+              />
 
               <svg
-                width="24"
-                height="24"
+                width="30"
+                height="30"
                 viewBox="0 0 24 24"
                 fill="none"
               >
                 <path
                   d="M12 5V19M6 13L12 19L18 13"
                   stroke="currentColor"
-                  strokeWidth="2.5"
+                  strokeWidth="3"
                   className="text-primary"
                 />
               </svg>
             </div>
-          </div>
+          </motion.div>
 
           {/* Row 3 */}
 
@@ -217,18 +292,22 @@ score:
             <div
               className="
                 grid
-                gap-8
-                lg:grid-cols-[1fr_90px_1fr]
+                gap-14
+                lg:grid-cols-[1fr_120px_1fr]
               "
             >
-              <JourneyItem item={journey[4]} />
+              <motion.div variants={fadeUp}>
+                <JourneyItem item={journey[4]} />
+              </motion.div>
 
               <div />
 
               <div />
             </div>
           )}
-        </div>
+
+        </motion.div>
+
       </Container>
     </section>
   );
