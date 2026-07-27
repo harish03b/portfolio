@@ -2,7 +2,7 @@
 
 A modern, responsive, and production-ready portfolio built with **React**, **TypeScript**, **Vite**, **Tailwind CSS**, and **Framer Motion**. This portfolio showcases my software engineering journey, AI projects, full-stack applications, cloud development, technical skills, and professional experience.
 
-🌐 **Live Demo:** https://portfolio-7papnq7w6-harish03bs-projects.vercel.app/
+🌐 **Live Demo:** https://portfolio-auxl7b5tm-harish03bs-projects.vercel.app/
 
 ---
 
@@ -232,7 +232,7 @@ Hosted on **Vercel**
 
 Live Website
 
-https://portfolio-7papnq7w6-harish03bs-projects.vercel.app/
+https://portfolio-auxl7b5tm-harish03bs-projects.vercel.app/
 
 ---
 
